@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="he" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alien Hypnosis</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-container">
+  <canvas id="game" width="900" height="600"></canvas>
+
+  <div id="hud">
+    <div id="wave-info">Wave 1</div>
+    <div id="aliens-info">Aliens: 0</div>
+    <div id="score-info">Kills: 0</div>
+    <div id="meter-bar"><div id="meter-fill"></div></div>
+  </div>
+
+  <div id="start-screen" class="overlay">
+    <h1>ALIEN HYPNOSIS</h1>
+    <p>WASD to move, aim with mouse, click or SPACE to shoot.</p>
+    <p>Don't stay in an alien's gaze too long or you'll be hypnotized.</p>
+    <p>Hide behind cover to break line of sight.</p>
+    <button id="start-btn">Start</button>
+  </div>
+
+  <div id="wave-screen" class="overlay hidden">
+    <h1 id="wave-title">WAVE 2</h1>
+    <p id="wave-subtitle">Get ready...</p>
+    <button id="wave-btn">Continue</button>
+  </div>
+
+  <div id="gameover-screen" class="overlay hidden">
+    <h1>HYPNOTIZED</h1>
+    <p id="gameover-score"></p>
+    <button id="restart-btn">Try Again</button>
+  </div>
+
+  <div id="win-screen" class="overlay hidden">
+    <h1>ALL ALIENS DEFEATED</h1>
+    <p id="win-score"></p>
+    <button id="win-restart-btn">Play Again</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
