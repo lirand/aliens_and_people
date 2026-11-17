@@ -1,49 +1,51 @@
 <!DOCTYPE html>
-<html lang="he" dir="ltr">
+<html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alien Hypnosis</title>
-<link rel="stylesheet" href="style.css">
+<title>הצייד שצד חייזרים</title>
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 <div id="game-container">
   <canvas id="game" width="900" height="600"></canvas>
 
   <div id="hud">
-    <div id="wave-info">Wave 1</div>
-    <div id="aliens-info">Aliens: 0</div>
-    <div id="score-info">Kills: 0</div>
+    <div id="wave-info">שלב 1</div>
+    <div id="aliens-info">אויבים: 0</div>
+    <div id="score-info">הריגות: 0</div>
     <div id="meter-bar"><div id="meter-fill"></div></div>
   </div>
 
   <div id="start-screen" class="overlay">
-    <h1>ALIEN HYPNOSIS</h1>
-    <p>WASD to move, aim with mouse, click or SPACE to shoot.</p>
-    <p>Don't stay in an alien's gaze too long or you'll be hypnotized.</p>
-    <p>Hide behind cover to break line of sight.</p>
-    <button id="start-btn">Start</button>
+    <h1>הצייד שצד חייזרים</h1>
+    <p>WASD כדי לזוז, עכבר כדי לכוון, קליק או רווח כדי לירות.</p>
+    <p>אל תישאר יותר מדי זמן במבט של חייזר — אחרת תהופנט.</p>
+    <p>תתחבא מאחורי קירות כדי לשבור קו ראייה.</p>
+    <p>כשהעיגול הכחול מתמלא — לחץ רווח והפוך לבלתי נראה ל-20 שניות!</p>
+    <button id="start-btn">התחל</button>
   </div>
 
   <div id="wave-screen" class="overlay hidden">
-    <h1 id="wave-title">WAVE 2</h1>
-    <p id="wave-subtitle">Get ready...</p>
-    <button id="wave-btn">Continue</button>
+    <h1 id="wave-title">שלב 2</h1>
+    <canvas id="crown-preview" class="hidden" width="320" height="260"></canvas>
+    <p id="wave-subtitle">התכונן...</p>
+    <button id="wave-btn">המשך</button>
   </div>
 
   <div id="gameover-screen" class="overlay hidden">
-    <h1>HYPNOTIZED</h1>
+    <h1>הופנטת!</h1>
     <p id="gameover-score"></p>
-    <button id="restart-btn">Try Again</button>
+    <button id="restart-btn">נסה שוב את השלב</button>
   </div>
 
   <div id="win-screen" class="overlay hidden">
-    <h1>ALL ALIENS DEFEATED</h1>
+    <h1>ניצחת את כל החייזרים!</h1>
     <p id="win-score"></p>
-    <button id="win-restart-btn">Play Again</button>
+    <button id="win-restart-btn">שחק שוב</button>
   </div>
 </div>
 
-<script src="game.js"></script>
+<script src="game.js?v=9"></script>
 </body>
 </html>
