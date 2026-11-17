@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>הצייד שצד חייזרים</title>
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
 <div id="game-container">
@@ -19,11 +19,22 @@
 
   <div id="start-screen" class="overlay">
     <h1>הצייד שצד חייזרים</h1>
-    <p>WASD כדי לזוז, עכבר כדי לכוון, קליק או רווח כדי לירות.</p>
-    <p>אל תישאר יותר מדי זמן במבט של חייזר — אחרת תהופנט.</p>
-    <p>תתחבא מאחורי קירות כדי לשבור קו ראייה.</p>
-    <p>כשהעיגול הכחול מתמלא — לחץ רווח והפוך לבלתי נראה ל-20 שניות!</p>
+    <div class="howto">
+      <h2>איך משחקים</h2>
+      <ul>
+        <li><b>תזוזה:</b> מקשי W A S D</li>
+        <li><b>ירי:</b> מכוונים עם העכבר ולוחצים קליק או רווח</li>
+        <li><b>המטרה:</b> לחסל את כל החייזרים בכל שלב — יש 100 שלבים!</li>
+        <li><b>היפנוזה:</b> כשחייזר מסתכל עליך, המד למעלה מתמלא. אם הוא מגיע לסוף — הופנטת והפסדת</li>
+        <li><b>מסתור:</b> תתחבא מאחורי קירות — החייזרים לא רואים דרכם</li>
+        <li><b>בוגדים:</b> משלב 5 מגיעים אנשים בגלימות שיורים עליך כדורים סגולים</li>
+        <li><b>כוח סודי:</b> כשהעיגול הכחול סביבך מתמלא — לחץ רווח ותהיה בלתי נראה ל-20 שניות</li>
+        <li><b>כתרים:</b> כל 5 שלבים מקבלים כתר חדש ומפואר יותר 👑</li>
+        <li><b>הפסדת?</b> ממשיכים מאותו השלב</li>
+      </ul>
+    </div>
     <button id="start-btn">התחל</button>
+    <p class="credit">המשחק נוצר על ידי נועה 💚</p>
   </div>
 
   <div id="wave-screen" class="overlay hidden">
@@ -46,6 +57,6 @@
   </div>
 </div>
 
-<script src="game.js?v=12"></script>
+<script src="game.js?v=13"></script>
 </body>
 </html>

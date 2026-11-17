@@ -142,34 +142,34 @@
       ctx.fill();
     }
 
-    // scary mouth with teeth
-    const mouthOpen = seesPlayer ? 0.35 : 0.2;
-    ctx.fillStyle = '#0a1a0a';
+    // cheeky smile (a little sly when hypnotizing)
+    const smileW = r * 0.32;
+    const smileY = r * 0.38;
+    const smileDepth = seesPlayer ? r * 0.2 : r * 0.13;
+    ctx.fillStyle = '#1d4a2c';
     ctx.beginPath();
-    ctx.ellipse(0, r * 0.4, r * 0.35, r * mouthOpen, 0, 0, Math.PI * 2);
+    ctx.moveTo(-smileW, smileY);
+    ctx.quadraticCurveTo(0, smileY + smileDepth * 2, smileW, smileY);
+    ctx.quadraticCurveTo(0, smileY + smileDepth * 0.6, -smileW, smileY);
     ctx.fill();
-    ctx.strokeStyle = '#1a3320';
-    ctx.lineWidth = 1;
-    ctx.stroke();
-    // jagged teeth
-    ctx.fillStyle = '#ccddbb';
-    const teeth = 5;
-    const tw = (r * 0.6) / teeth;
-    for (let i = 0; i < teeth; i++) {
-      const tx = -r * 0.3 + i * tw;
-      // top teeth
+    // two small neat fangs
+    ctx.fillStyle = '#f2fff2';
+    for (const fx of [-smileW * 0.45, smileW * 0.45]) {
       ctx.beginPath();
-      ctx.moveTo(tx, r * (0.4 - mouthOpen * 0.6));
-      ctx.lineTo(tx + tw * 0.5, r * (0.4 - mouthOpen * 0.15));
-      ctx.lineTo(tx + tw, r * (0.4 - mouthOpen * 0.6));
-      ctx.fill();
-      // bottom teeth
-      ctx.beginPath();
-      ctx.moveTo(tx, r * (0.4 + mouthOpen * 0.6));
-      ctx.lineTo(tx + tw * 0.5, r * (0.4 + mouthOpen * 0.15));
-      ctx.lineTo(tx + tw, r * (0.4 + mouthOpen * 0.6));
+      ctx.moveTo(fx - 2, smileY + smileDepth * 0.35);
+      ctx.lineTo(fx + 2, smileY + smileDepth * 0.35);
+      ctx.lineTo(fx, smileY + smileDepth * 0.35 + 3.5);
+      ctx.closePath();
       ctx.fill();
     }
+    // smile corners
+    ctx.strokeStyle = '#1d4a2c';
+    ctx.lineWidth = 1.2;
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    ctx.moveTo(-smileW - 2, smileY - 2); ctx.lineTo(-smileW, smileY);
+    ctx.moveTo(smileW + 2, smileY - 2); ctx.lineTo(smileW, smileY);
+    ctx.stroke();
 
     // little antennae
     const antennaWave = Math.sin(t * 2) * 0.15;
