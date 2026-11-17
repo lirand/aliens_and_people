@@ -1530,6 +1530,7 @@
   // ---------- input ----------
   window.addEventListener('keydown', (e) => {
     handleSecretCode(e);
+    if (e.key.startsWith('Arrow')) e.preventDefault(); // don't scroll the page
     if (e.key === ' ') {
       e.preventDefault();
       if (game.state === 'playing' && !e.repeat &&
